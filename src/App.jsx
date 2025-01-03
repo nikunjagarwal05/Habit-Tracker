@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import Header from './Components/Header'
-import Sidebar from './Components/Sidebar'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
 import HabitCard from './components/HabitCard'
 import ToDoCard from './components/TodoCard'
 import ChallengesCard from './components/ChallengesCard'
