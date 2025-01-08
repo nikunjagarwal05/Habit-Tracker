@@ -5,3 +5,10 @@
 body {
     @apply bg-gray-100 text-gray-900;
 }
+:root{
+    --base-color: white;
+    --primary-color: #D9D9D9;
+    --accent-color: #514178;
+    --sec-accent-color: rgba(81, 65, 120, 0.81);
+
+}
