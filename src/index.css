@@ -7,8 +7,17 @@ body {
 }
 :root{
     --base-color: white;
-    --primary-color: #D9D9D9;
-    --accent-color: #514178;
-    --sec-accent-color: rgba(81, 65, 120, 0.81);
-
+    --header-color: #514178;
+    --subheader-color: rgba(81, 65, 120, 0.81);
+    --box-color: #D9D9D9;
+    --titlebox-color: #A9A5A5;
+    --bar-color: #5B4F4F;
+}
+.darkmode{
+    --base-color: #282828;
+    --header-color: black;
+    --subheader-color: 121212;
+    --box-color: #3F3F3F;
+    --titlebox-color: #897CA4;
+    --bar-color: #5B4F4F;
 }

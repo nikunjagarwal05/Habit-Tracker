@@ -7,6 +7,7 @@ import RewardCard from './components/RewardCard'
 import StreakCard from './components/StreakCard'
 
 
+
 function App() {
   return (
     <>
