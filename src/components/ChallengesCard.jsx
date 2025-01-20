@@ -1,13 +1,12 @@
 import React from "react";
+import ToDoList from "./ToDoList";
 
 const ChallengesCard = () => {
     return(
-        <div className="h-[444px] w-[320px] mt-[32px]">
-            <p className="text-[22px] ms-[18px] font-semibold">Challenges</p>
-            <div className="h-[403px] w-[320px] bg-[#D9D9D9] mt-[10px] flex justify-center ">
-                <div className="bg-[#A9A5A5] h-[55px] w-[287px] mt-[18px] flex items-center">
-                    <p className="text-[19px] mx-[9px] font-medium">Add a Challenge</p>
-                </div>
+        <div className="h-[544px] w-[320px] mt-8">
+            <p className="text-[22px] ms-5 font-semibold dark:text-white">Challenges</p>
+            <div className="h-[470px] w-[400px] bg-[#F0F0F0] hover:bg-[#e3e3e3] dark:bg-[#3F3F3F] mt-2 flex justify-center ">
+                <ToDoList />
             </div>
         </div>
     );

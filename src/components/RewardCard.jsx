@@ -2,8 +2,9 @@ import React from "react";
 
 const RewardCard = () => {
     return(
-        <div className="h-[180px] w-[320px] bg-[#D9D9D9] mt-[74px]">
-            <div className="w-[123px] h-[48px] bg-[#A9A5A5] mt-[18px] ml-[18px] flex indent-[14px] items-center font-medium text-[22px]">Rewards</div>
+        <div>
+            <span className="text-[22px] ms-5 font-semibold dark:text-white">Rewards</span>
+            <div className="h-[213px] w-[320px] bg-[#F0F0F0] hover:bg-[#e3e3e3] dark:bg-[#3F3F3F]"></div>
         </div>
     );
 };

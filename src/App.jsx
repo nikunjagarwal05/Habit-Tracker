@@ -5,27 +5,28 @@ import ToDoCard from './components/TodoCard'
 import ChallengesCard from './components/ChallengesCard'
 import RewardCard from './components/RewardCard'
 import StreakCard from './components/StreakCard'
-
-
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
-      <Header />
-      <Sidebar />
-      <div className='flex h-[474px] gap-[82px] w-full flex-row'>
-        <HabitCard />
-        <ToDoCard />
-        <ChallengesCard />
+    <body className='dark:bg-[#1C1C1C] h-full flex flex-col gap-[58px]'>
+      <div>
+        <Header />
+        <Sidebar />
+        <div className='flex h-[500px] gap-[100px] justify-center w-full flex-row'>
+          <HabitCard />
+          <ToDoCard />
+          <ChallengesCard />
 
-        <div className='flex flex-col gap-[40px]'>
-          <RewardCard />
-          <StreakCard/>
+          <div className='flex flex-col mt-10 gap-2 h-[544px] w-[320px]'>
+            <StreakCard/>
+            <RewardCard />
+          </div>
         </div>
-
       </div>
-    </>
+
+      <Footer />
+    </body>
   )
 }
-
 export default App
