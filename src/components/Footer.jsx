@@ -23,7 +23,7 @@ const Footer = () => {
 
     return(
         <div>
-            <div className="h-[60px] w-[200px] bg-[#514178] bottom-0 right-0 fixed mr-10 rounded-[10px] flex justify-center items-center">
+            <div className="h-[60px] w-[200px] dark:bg-black bg-[#514178] bottom-0 right-0 fixed mr-10 rounded-[10px] flex justify-center items-center">
                 <p className="text-white text-sm text-center">
                     Time Left for Next Day: <br />
                     <strong>
@@ -32,7 +32,7 @@ const Footer = () => {
                 </p>
             </div>
             {/* Footer */}
-            <div className="w-full h-3 bg-[#514178] fixed bottom-0 right-0"></div>
+            <div className="w-full h-3 dark:bg-black bg-[#514178] fixed bottom-0 right-0"></div>
         </div>
     );
 };
