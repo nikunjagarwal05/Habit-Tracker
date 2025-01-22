@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import morningImage from "../assets/Morning.jpg";
+import afternoonImage from "../assets/Afternoon.jpg";
+import eveningImage from "../assets/Evening.jpg";
+import nightImage from "../assets/Night.jpg";
 
 const Sidebar = () => {
     
@@ -13,6 +17,21 @@ const Sidebar = () => {
     const healthLossPerUnfinishedTask = 1;
     const extraHealthOnLevelUp = 1;
     const goldRewardForNextLevelUp = 1;
+
+    const getBackgroundImage = () => {
+        switch(greeting) {
+            case "Morning":
+                return morningImage;
+            case "Afternoon":
+                return afternoonImage;
+            case "Evening":
+                return eveningImage;
+            case "Night":
+                return nightImage;
+            default:
+                return morningImage;
+        }
+    };
 
     const handleCompletion = (pointsEarned, goldEarned) => {
         setExperience((prevExp) => {
@@ -99,9 +118,9 @@ const Sidebar = () => {
             <div className="h-[225px] w-full bg-[rgba(81,65,120,0.81)] dark:bg-[#121212] flex justify-center items-center gap-6">
                 
                 {/* Greeting Section */}
-                <div className="h-[167px] w-[274px] bg-[#D9D9D9] dark:bg-[#3F3F3F] rounded-[17px]">
-                    <p className="text-[33px] text-[#5B4F4F] dark:text-[#A9A5A5] font-bold px-[12px] py-[10px]">Good <br />{greeting},</p>
-                    <p className="text-[19px] px-[12px] dark:text-white">user.</p>
+                <div className="h-[167px] w-[274px] bg-[#D9D9D9] dark:bg-[#3F3F3F] rounded-[17px] bg-cover" style={{backgroundImage: `url(${getBackgroundImage()})`,}}>
+                    <p className="text-[33px] text-white dark:text-[#A9A5A5] font-bold px-[12px] py-[10px]">Good <br />{greeting},</p>
+                    <p className="text-[19px] px-[12px] text-white dark:text-white">user.</p>
                 </div>
 
                 <div className="flex flex-col gap-2">
