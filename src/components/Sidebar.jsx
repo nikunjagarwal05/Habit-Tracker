@@ -13,6 +13,7 @@ const Sidebar = () => {
     const [gold, setGold] = useState(0);
     const [greeting, setGreeting] = useState("Good Morning");
     const [maxHealth, setMaxHealth] = useState(10);
+    const [currentDate, setCurrentDate] = useState("");
     const dailyHealthRefill = 5;
     const healthLossPerUnfinishedTask = 1;
     const extraHealthOnLevelUp = 1;
@@ -31,6 +32,12 @@ const Sidebar = () => {
             default:
                 return morningImage;
         }
+    };
+
+    const formatDate = () => {
+        const options = { day: "2-digit", month: "short", year: "numeric" };
+        const today = new Date();
+        return today.toLocaleDateString("en-US", options);
     };
 
     const handleCompletion = (pointsEarned, goldEarned) => {
@@ -95,6 +102,10 @@ const Sidebar = () => {
     }, []);
 
     useEffect(() => {
+        setCurrentDate(formatDate());
+    }, []);
+
+    useEffect(() => {
         const refillHealth = () => {
             setHealth((prevHealth) => Math.min(maxHealth, prevHealth + dailyHealthRefill));
         };
@@ -124,16 +135,22 @@ const Sidebar = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    {/* Level Display */}
-                    <div className="h-[80px] w-[166px] bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-[17px]">
-                        <p className="text-[20px] text-white dark:text-white">Level:  <strong>  {level}</strong></p>
+                    {/* Date Display */}
+                    <div className="h-[80px] w-[307px] bg-[#675B83] hover:bg-[#5F4F84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] rounded-[17px] flex justify-center items-center">
+                        <p className="text-[20px] text-white dark:text-white"><strong>{currentDate}</strong></p>
                     </div>
-
-                    <div className="h-[80px] w-[166px] bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-[17px]">
-                        <p className="text-[20px] dark:text-white flex gap-3">
-                            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" className="size-[30px]" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icon/Currency/Gem/24x24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="-g-Gem" transform="translate(0.000000, 2.000000)"><polygon id="Shape" fill="#24CC8F" points="0 7 5 0 19 0 24 7 12 20"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 6 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="17 6.8 18 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="7 6.8 12 2 17 6.8"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="2.6 6.8 6 2 7 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="21.4 6.8 18 2 17 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="2.6 6.8 7 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="21.4 6.8 17 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 17 6.8 12 17.1"></polygon></g></g></svg>
-                            <span className="text-white"><strong>  {gold}</strong></span>
-                        </p>
+                    {/* Level Display */}
+                    <div className="flex flex-row gap-2">
+                        <div className="h-[80px] w-[150px] bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-[17px]">
+                            <p className="text-[20px] text-white dark:text-white">Level:  <strong>  {level}</strong></p>
+                        </div>
+                        {/* Gems Display */}
+                        <div className="h-[80px] w-[150px] bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-[17px]">
+                            <p className="text-[20px] dark:text-white flex gap-3">
+                                <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" className="size-[30px]" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icon/Currency/Gem/24x24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="-g-Gem" transform="translate(0.000000, 2.000000)"><polygon id="Shape" fill="#24CC8F" points="0 7 5 0 19 0 24 7 12 20"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 6 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="17 6.8 18 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="7 6.8 12 2 17 6.8"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="2.6 6.8 6 2 7 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="21.4 6.8 18 2 17 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="2.6 6.8 7 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="21.4 6.8 17 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 17 6.8 12 17.1"></polygon></g></g></svg>
+                                <span className="text-white"><strong>  {gold}</strong></span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -176,6 +193,8 @@ const Sidebar = () => {
 
                 </div>
             </div>
+
+            <div className="w-full bg-cover bg-center aspect-[900/300] absolute z-[-1] bg-[url('./assets/sidebar.svg')] dark:bg-[url('./assets/sidebar.svg')]"></div>
         </div>
     );
 };

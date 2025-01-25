@@ -1,8 +1,7 @@
 import React from "react";
 import ToDoList from "./ToDoList";
 
-const HabitCard = ({handleCompletion, handleUnfinishedTasks}) => {
-
+const HabitCard = () => {
     return(
         <div className="h-[544px] w-[320px] mt-8">
             <p className="text-[22px] ms-5 font-semibold dark:text-white">Habits</p>
