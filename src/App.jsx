@@ -7,6 +7,7 @@ import ChallengesCard from './components/ChallengesCard'
 import RewardCard from './components/RewardCard'
 import StreakCard from './components/StreakCard'
 import Footer from './components/Footer'
+import './fonts.css'
 
 function App() {
 

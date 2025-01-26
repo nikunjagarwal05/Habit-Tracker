@@ -4,6 +4,8 @@ import afternoonImage from "../assets/Afternoon.jpg";
 import eveningImage from "../assets/Evening.jpg";
 import nightImage from "../assets/Night.jpg";
 
+import '../fonts.css'
+
 const Sidebar = () => {
     
     const [level, setLevel] = useState(1);
@@ -126,7 +128,7 @@ const Sidebar = () => {
 
     return (
         <div>
-            <div className="h-[225px] w-full bg-[rgba(81,65,120,0.81)] dark:bg-[#121212] flex justify-center items-center gap-6">
+            <div className="h-[225px] w-full bg-[rgba(81,65,120,0.81)] dark:bg-[#121212] flex justify-center items-center gap-10">
                 
                 {/* Greeting Section */}
                 <div className="h-[167px] w-[274px] bg-[#D9D9D9] dark:bg-[#3F3F3F] rounded-[17px] bg-cover" style={{backgroundImage: `url(${getBackgroundImage()})`,}}>
@@ -189,9 +191,7 @@ const Sidebar = () => {
                         onClick={() => handleUnfinishedTasks(1)}> Unfinished </button>
                 </div>
 
-                <div className="w-[400px] h-[167px] bg-[#675B83] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] hover:bg-[#5f4f84] rounded-[26px] flex flex-col">
-
-                </div>
+                {/* <div className="w-[400px] h-[167px] bg-[#675B83] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] hover:bg-[#5f4f84] rounded-[26px] flex flex-col"></div> */}
             </div>
 
             <div className="w-full bg-cover bg-center aspect-[900/300] absolute z-[-1] bg-[url('./assets/sidebar.svg')] dark:bg-[url('./assets/sidebar.svg')]"></div>

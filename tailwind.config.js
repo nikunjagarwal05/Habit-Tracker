@@ -5,7 +5,12 @@ module.exports = {
     "./pages/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        'tl-50-100': '50% 100%',
+        'tr-50-100': '50% 100%',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

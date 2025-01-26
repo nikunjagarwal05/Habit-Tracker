@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'crux';
+    src: url('./fonts/medodica.regular.otf') format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'regs';
+    src: url('./fonts/coders-crux.regular.ttf') format('truetype');
+    
+    font-weight: normal;
+    font-style: normal;
+}
