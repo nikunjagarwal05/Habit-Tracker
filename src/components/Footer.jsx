@@ -23,12 +23,10 @@ const Footer = () => {
 
     return(
         <div>
-            <div className="h-[60px] w-[200px] dark:bg-black bg-[#514178] bottom-0 right-0 fixed mr-10 rounded-[10px] flex justify-center items-center">
-                <p className="text-white text-sm text-center">
-                    Time Left for Next Day: <br />
-                    <strong>
-                        {timeLeft.hours}h {timeLeft.minutes}m
-                    </strong>
+            <div className="h-16 w-52 dark:bg-black bg-[#514178] bottom-0 right-0 fixed mr-10 rounded-[10px] flex justify-center items-center">
+                <p className="text-white text-[10px] text-center">
+                    Time Left for Next Day:
+                    <strong> {timeLeft.hours}h {timeLeft.minutes}m </strong>
                 </p>
             </div>
             {/* Footer */}

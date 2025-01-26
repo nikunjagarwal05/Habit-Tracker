@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
     font-family: 'crux';
     src: url('./fonts/medodica.regular.otf') format('opentype');

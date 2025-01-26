@@ -32,11 +32,11 @@ function App() {
       <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
       <Sidebar />
       
-      <div className='flex h-[500px] gap-[100px] justify-center w-full flex-row'>
+      <div className='flex h-[500px] gap-12 justify-center w-full flex-row'>
         <HabitCard />
         <ToDoCard />
         <ChallengesCard />
-        <div className='flex flex-col mt-10 gap-2 h-[544px] w-[320px]'>
+        <div className='flex flex-col mt-7 gap-5 h-[544px] w-[320px]'>
           <StreakCard/>
           <RewardCard />
         </div>
