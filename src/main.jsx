@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     errorElement: <div>404 Not Found</div>
   },
   {
-    path: '/kaisen',
+    path: '/kaizen',
     element: <App />,
   },
 ]);

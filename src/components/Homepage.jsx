@@ -10,7 +10,7 @@ const Homepage = () => {
         <nav className="flex justify-between items-center p-5 bg-white shadow-md dark:bg-gray-800">
             <span className="text-5xl font-bold text-gray-800 dark:text-white">Kaisen</span>
             <ul className="flex space-x-6 text-lg font-medium">
-                <li><a href="http://localhost:5173/Kaisen" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Home</a></li>
+                <li><a href="http://localhost:5173/Kaizen" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Home</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Learn </a> </li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">About Us</a></li>
             </ul>

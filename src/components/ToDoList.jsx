@@ -6,7 +6,7 @@ function ToDoList() {
     const [newTask, setNewTask] = useState("");
     const [placeholderText, setPlaceholderText] = useState("Add a Habit");
 
-    const colors = ["#1C1C1C", "#35313D", "#514178", "#979188"];
+    const colors = ["#B82132", "#A35C7A", "#809D3C", "#979188"];
     
     function handleInputChange(event) {
         setNewTask(event.target.value);
@@ -48,8 +48,8 @@ function ToDoList() {
                     </button>
 
                     <div>
-                        <span className="h-14 w-80 dark:text-white bg-[#979188] dark:bg-[#1c1c1c] text-black text-xs flex items-center pl-2 font-medium">
-                        <div className="h-14 w-1 ml-[-40px] mr-10 " style={{ backgroundColor: colors[index % colors.length], }}/*</span>style={{ backgroundColor: task.color }}*/></div>{task.text}</span>
+                        <span className="h-14 w-72 bg-[#e3e3e3] hover:bg-[#aca8a8] dark:hover:bg-black dark:bg-[#1c1c1c] dark:text-white text-black text-xs flex items-center pl-2 font-medium">
+                        <div className="h-14 w-2 ml-[-56px] mr-14" style={{ backgroundColor: colors[index % colors.length], }}/*</span>style={{ backgroundColor: task.color }}*/></div>{task.text}</span>
                     </div>
 
                     <button className="h-14 w-16 bg-[#1C1C1C] text-white">
