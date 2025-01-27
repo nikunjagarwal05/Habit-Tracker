@@ -4,16 +4,20 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx';
 import './index.css';
 import Homepage from './components/Homepage.jsx';
+import pageNotFound from './components/pageNotFound.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Homepage />,
-    errorElement: <div>404 Not Found</div>
   },
   {
     path: '/kaizen',
     element: <App />,
+  },
+  {
+    path: '*',
+    element: <pageNotFound/>,
   },
 ]);
 

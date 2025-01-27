@@ -8,7 +8,7 @@ const Homepage = () => {
     <div style={{fontFamily: 'crux'}}>
         {/* Navbar */}
         <nav className="flex justify-between items-center p-5 bg-white shadow-md dark:bg-gray-800">
-            <span className="text-5xl font-bold text-gray-800 dark:text-white">Kaisen</span>
+            <span className="text-5xl font-bold text-gray-800 dark:text-white">Kaizen</span>
             <ul className="flex space-x-6 text-lg font-medium">
                 <li><a href="http://localhost:5173/Kaizen" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Home</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Learn </a> </li>
@@ -20,16 +20,16 @@ const Homepage = () => {
         {/* Hero Section */}
         <section className="h-screen flex justify-center items-center bg-gray-100 dark:bg-gray-900 gap-[20px]">
             <div className="flex flex-col justify-center items-center px-6">
-                <h1 className="text-7xl font-bold text-gray-800 dark:text-white mb-4">This is Kaisen.</h1>
+                <h1 className="text-7xl font-bold text-gray-800 dark:text-white mb-4">This is Kaizen.</h1>
                 <p className="text-3xl text-gray-600 dark:text-gray-300 text-center max-w-3xl">
                     Turn your productive goals into an adventure. Kaisen makes building
                     habits and achieving tasks fun and rewarding.</p>
                 <button className="mt-8 bg-[#574964] hover:bg-[#35293f] text-white px-6 py-3 rounded-lg text-2xl font-medium shadow-md transition duration-300">Join Kaisen Today</button>
             </div>
-            <div className="relative h-[700px] w-[700px]">
-                <img className="bg-cover absolute h-[500px] w-full top-0 left-0" src={lightImage} alt="light-mode" />
-                <img className="bg-cover absolute h-[500px] w-[95%] top-[100px] left-[100px]" src={darkImage} alt="dark-mode" />
-            </div>
+            {/* <div className="relative h-[700px] w-[700px]">
+                <img className="bg-cover absolute h-[500px] w-[95%] top-0 left-0" src={darkImage} alt="dark-mode" />
+                <img className="bg-cover absolute h-[500px] w-full top-[100px] left-[100px]" src={lightImage} alt="light-mode" />
+            </div> */}
         </section>
 
         {/* Habit Functionality Section */}
