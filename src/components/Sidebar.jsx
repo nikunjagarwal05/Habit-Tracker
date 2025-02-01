@@ -128,36 +128,36 @@ const Sidebar = () => {
 
     return (
         <div>
-            <div className="h-56 w-full shadow-md bg-[#726592] dark:bg-[#121212] flex justify-center items-center gap-10">
+            <div className="h-56 shadow-md bg-[#726592] dark:bg-[#121212] flex justify-center items-center gap-10">
                 
                 {/* Greeting Section */}
                 <div className="h-40 w-72 bg-[#D9D9D9] dark:bg-[#3F3F3F] rounded-[17px] bg-cover" style={{backgroundImage: `url(${getBackgroundImage()})`,}}>
                     <p className="text-2xl text-white font-bold px-3 py-3">Good <br />{greeting},</p>
-                    <p className="text-sm px-3 text-white dark:text-white">user</p>
+                    <p className="text-sm px-3 text-white">user</p>
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col text-white gap-2">
                     {/* Date Display */}
                     <div className="h-20 w-80 bg-[#675B83] hover:bg-[#5F4F84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] rounded-2xl flex justify-center items-center">
-                        <p className="text-sm text-white dark:text-white"><strong>{currentDate}</strong></p>
+                        <p className="text-sm"><strong>{currentDate}</strong></p>
                     </div>
                     {/* Level Display */}
                     <div className="flex flex-row justify-between">
                         <div className="h-20 w-44 bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-2xl">
-                            <p className="text-sm text-white dark:text-white">Level:<strong>{level}</strong></p>
+                            <p className="text-sm">Level:<strong>{level}</strong></p>
                         </div>
                         {/* Gems Display */}
                         <div className="h-20 w-32 bg-[#675B83] hover:bg-[#5f4f84] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] flex justify-center items-center rounded-2xl">
-                            <p className="text-lg dark:text-white flex gap-3">
+                            <p className="text-lg  flex gap-3">
                                 <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" className="size-[30px]" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icon/Currency/Gem/24x24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="-g-Gem" transform="translate(0.000000, 2.000000)"><polygon id="Shape" fill="#24CC8F" points="0 7 5 0 19 0 24 7 12 20"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 6 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="17 6.8 18 2 12 2"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="7 6.8 12 2 17 6.8"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="2.6 6.8 6 2 7 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="21.4 6.8 18 2 17 6.8"></polygon><polygon id="Shape" fill="#34313A" opacity="0.11" points="2.6 6.8 7 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.5" points="21.4 6.8 17 6.8 12 17.1"></polygon><polygon id="Shape" fill="#FFFFFF" opacity="0.25" points="7 6.8 17 6.8 12 17.1"></polygon></g></g></svg>
-                                <span className="text-white"><strong> {gold}</strong></span>
+                                <span><strong> {gold}</strong></span>
                             </p>
                         </div>
                     </div>
                 </div>
 
                 {/* Progress Bars Section */}
-                <div className="h-40 w-[570px] bg-[#675B83] dark:hover:bg-[rgba(161,158,158,0.50)] hover:bg-[#5f4f84] dark:bg-[#3F3F3F] rounded-3xl gap-6 flex flex-col justify-center items-end pr-5">
+                <div className="h-40 w-[570px] text-white bg-[#675B83] dark:hover:bg-[rgba(161,158,158,0.50)] hover:bg-[#5f4f84] dark:bg-[#3F3F3F] rounded-3xl gap-6 flex flex-col justify-center items-end pr-5">
                 
                     {/* Health Bar */}
                     <div className="flex gap-3 mt-7">
@@ -167,7 +167,7 @@ const Sidebar = () => {
                                 <div className="bg-[#f74e52] delay-100 transition-all h-5 rounded-full" style={{ width: `${(health / maxHealth) * 100}%` }}></div>
                             </div>
                         </div>
-                        <span className="text-xs text-white dark:text-white mt-1"><strong>{health}</strong>/{maxHealth}</span>
+                        <span className="text-xs mt-1"><strong>{health}</strong>/{maxHealth}</span>
                     </div>
 
                     {/* Experience Bar */}
@@ -178,7 +178,7 @@ const Sidebar = () => {
                                 <div className="bg-[#ffbe5d] delay-150 ease-out transition-all h-5 rounded-full" style={{ width: `${(experience / maxExp) * 100}%` }}></div>
                             </div>
                         </div>
-                        <span className="text-xs text-white dark:text-white mt-1"><strong>{experience}</strong>/{maxExp}</span>
+                        <span className="text-xs mt-1"><strong>{experience}</strong>/{maxExp}</span>
                     </div>
                 </div>
 
@@ -190,10 +190,7 @@ const Sidebar = () => {
                     <button className="bg-[rgba(30,30,30,0.69)] dark:bg-[#27252A] hover:bg-[rgb(70,61,90)] rounded-full w-36 h-14 text-white text-xs text-center"
                         onClick={() => handleUnfinishedTasks(1)}> Unfinished </button>
                 </div>
-
-                {/* <div className="w-[400px] h-[167px] bg-[#675B83] dark:hover:bg-[rgba(161,158,158,0.50)] dark:bg-[#3F3F3F] hover:bg-[#5f4f84] rounded-[26px] flex flex-col"></div> */}
             </div>
-
             <div className="w-full bg-cover bg-center aspect-[900/300] absolute z-[-1] bg-[url('./assets/sidebar.svg')] dark:bg-[url('./assets/sidebar.svg')]"></div>
         </div>
     );

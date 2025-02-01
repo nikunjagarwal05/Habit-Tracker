@@ -38,7 +38,7 @@ function ToDoList() {
                     </button>
 
                     <div>
-                        <span className="h-14 w-72 bg-[#e3e3e3] hover:bg-[#aca8a8] dark:hover:bg-black dark:bg-[#1c1c1c] dark:text-white text-black text-xs flex items-center pl-2 font-medium">
+                        <span className="h-14 w-72 backdrop-blur-lg hover:bg-white dark:hover:bg-black dark:text-white text-black text-xs flex items-center pl-2 font-medium">
                         <div className="h-14 w-2 rounded-l-[10px] ml-[-56px] mr-14" style={{ backgroundColor: colors[index % colors.length], }}></div>{task.text}</span>
                     </div>
 
