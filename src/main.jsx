@@ -5,6 +5,7 @@ import App from './App.jsx';
 import './index.css';
 import Homepage from './components/Homepage.jsx';
 import pageNotFound from './components/pageNotFound.jsx';
+import Journal from './components/Journal.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/kaizen',
     element: <App />,
+  },
+  {
+    path: '/journal',
+    element: <Journal />
   },
   {
     path: '*',

@@ -12,6 +12,7 @@ const Homepage = () => {
                 <li><Link to={"/kaizen"} className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Home</Link></li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Learn </a> </li>
                 <li><a href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">About Us</a></li>
+                <li><Link to={"/Journal"} className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white text-2xl">Journal</Link></li>
             </ul>
             <button className="bg-[#574964] hover:bg-[#35293f] text-white px-5 py-2 rounded-lg shadow-md transition duration-300 font-bold text-3xl">Sign Up</button>
         </nav>

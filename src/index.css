@@ -10,25 +10,3 @@
 body {
     font-family: 'Press Start 2P';
 }
-
-.light{
-    --base-color: white;
-    --header-color: #514178;
-    --subheader-color: rgba(81, 65, 120, 0.81);
-    --box-color: #D9D9D9;
-    --toggle-color: #A9A5A5;
-    --titlebar-color: #A9A5A5;
-    --togglecircle-color: #514178;
-    --bar-color: #5B4F4F;
-}
-
-.dark {
-    --base-color: #1C1C1C;
-    --header-color: black;
-    --subheader-color: #121212;
-    --box-color: #3F3F3F;
-    --toggle-color: #A9A5A5;
-    --titlebar-color: #A9A5A5;
-    --togglecircle-color: #4C3737;
-    --bar-color: #A9A5A5;
-}

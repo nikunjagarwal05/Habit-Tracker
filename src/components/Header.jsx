@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import "../fonts.css";
 
 const Header = ({toggleDarkMode, darkMode}) => {
     return(
         <header>
             <div className='h-24 w-full shadow-lg bg-[#514178] dark:bg-[#000000] flex justify-between ps-10 items-center'>
                 <div className='flex gap-20 justify-center items-center'>
-                    <p className='text-3xl pt-3 dark:hover:text-[#b9b8b8] hover:text-[#1d1b1b] dark:text-white'>KAiZEN</p>
+                    <p className='text-2xl pt-3 dark:hover:text-[#b9b8b8] hover:text-[#1d1b1b] dark:text-white'><Link to={"/"}>Kaizen</Link></p>
                     
                     <div className='mt-[57px]'>
-                        <div className={`h-10 rounded-t-3xl w-96 bg-[#726592] dark:bg-[#121212] flex justify-center items-end`}>
-                            <ul className='flex gap-8'>
+                        <div className={`h-20 rounded-t-2xl w-[400px] bg-[#726592] dark:bg-[#121212] flex justify-center items-center`}>
+                            <ul className='flex text-4xl gap-8 font-bold'  style={{fontFamily: 'crux'}}>
                                 <li className='hover:underline underline-offset-8 z-0 text-[#bebebe]'><Link>Home</Link></li>
                                 <li className='hover:underline underline-offset-8 z-0 text-[#bebebe]'><Link>Stats</Link></li>
+                                <li className='hover:underline underline-offset-8 z-0 text-[#bebebe]'><Link to={"/journal"}>Journal</Link></li>
                             </ul>
                         </div>
                     </div>
