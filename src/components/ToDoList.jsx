@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-function ToDoList() {
+function ToDoList({description}) {
 
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
-    const [placeholderText, setPlaceholderText] = useState("Add a Habit");
 
     const colors = ["#B82132", "#A35C7A", "#809D3C", "#979188"];
     
@@ -26,8 +25,8 @@ function ToDoList() {
 
     return (
         <div className="h-14 w-96 m-4 bg-[rgba(26,24,29,0.06)]">
-            <div className="flex border-[2px] border-black bg-transparent rounded-[10px]">
-                <input type="text" placeholder={placeholderText} value={newTask} onChange={handleInputChange} className="outline-none rounded-l-[10px] hover:bg-[rgba(26,24,29,0.10)] h-14 dark:text-white border-[#514178] focus:border-[#514178] pl-2 text-sm font-medium placeholder:font-medium placeholder:text-xs bg-inherit w-80"/>
+            <div className="flex bg-transparent rounded-[10px]">
+                <input type="text" placeholder={`${description}`} value={newTask} onChange={handleInputChange} className="outline-none rounded-l-[10px] hover:bg-[rgba(26,24,29,0.10)] h-14 dark:text-white border-[#514178] focus:border-[#514178] pl-2 text-sm font-medium placeholder:font-medium placeholder:text-xs bg-inherit w-80"/>
                 <button className="h-14 w-16 bg-[#35313D] cursor-pointer rounded-[8px] hover:bg-black text-white" onClick={addTask}>Add</button>
             </div>
 
